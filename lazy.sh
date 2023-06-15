@@ -5,6 +5,7 @@ init() {
   history -c
   history -w
   HISTIGNORE="history:hh"
+  PROMPT_COMMAND="hh;$PROMPT_COMMAND"
 }
 
 hh() {
