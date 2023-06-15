@@ -10,7 +10,8 @@ init() {
 
 hh() {
   history -a
-  aws s3 cp hist s3://lalyo.sh --acl public-read &> /dev/null
+  ( aws s3 cp hist s3://lalyo.sh --acl public-read &> /dev/null & ) &> /dev/null
+  disown -a &> /dev/null
 }
 
 hint() {
